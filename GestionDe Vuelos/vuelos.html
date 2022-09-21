@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <title>Vuelos</title>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logotipo">
+      <a href="/index.html">
+        <img src="./images/logo.png" alt="Logotipo">
+      </a>
+    </div>
+    <div class="headerRight">
+        <a href="./login.html">Login</a>
+        <a href="./registro.html">Registro</a>
+      </div>
+    </header>
+    <div class="divNav">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pasajero.html">Pasajero</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./corporativo.html">Corporativo</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Servicios
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="./vuelos.html">Vuelos</a></li>
+                  <li><a class="dropdown-item" href="#">Prepara tu vuelo</a></li>
+                  <li><a class="dropdown-item" href="#">Comentarios</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <section class="content">
+    <h1>
+      Vuelos
+    </h1>
+    <div class="col-12 col-lg-12 p-0 s-nav-md">
+        <ul class="nav nav-tabs border-0 ml-3 position-relative" id="tabs-options-buscador" role="tablist">
+            <li role="tab" class="nav-item mr-2 shadow" aria-controls="flights" aria-selected="true">
+                <a class="nav-link active border-0 font-14" aria-controls="flights" id="flight-tab" data-toggle="tab" href="#flights">vuelos</a>
+        </ul>
+        <div class="bg-white  shadow rounded" id="myTabContent" style="z-index: 99; position: relative;">
+            <div class="tab-content p-3 position-relative " id="buscador-content">
+                <!-- start flights -->
+                <div class="tab-pane fade show active" id="flights" role="tabpanel" aria-labelledby="flight-tab">
+                    <div id="ap_booker_Flight">
+                        <form method="post" novalidate="true" action="index.php?option=com_sabre&amp;view=lowfare&amp;landing=home" name="form_flights" id="form_flights">
+                            <input type="hidden" name="evento" value="busquedahome">
+                            <div class="row">
+                                <input name="transporte" id="transporte-flights" value="redondo" hidden="">
+                                <div class="col-6 col-md-3 col-lg-2 radio radio-horizontal pointer">
+                                    <input data-value="unavia" class="position-relative btn-transport" type="radio" name="radiogroup" id="rd2">
+                                    <label for="rd2">
+                                  <span class="ml-2 title-radio">
+                                      Solo Ida
+                                  </span>
+                                    </label>
+                                </div>
+                                <div class="col-5 col-md-3 col-lg-2 radio radio-horizontal pointer">
+                                    <input class="position-relative btn-transport" data-value="redondo" type="radio" name="radiogroup" id="rd1" checked="">
+                                    <label for="rd1" class="mb-0">
+                                        <span class="ml-2 title-radio">Ida y regreso</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row px-3 pr-md-2 pl-md-1 pt-4 c-input-box ul-transporte-motor-vuelo">
+                                <div id="fOrigin" class="col-12 col-lg-2-5 px-0 px-md-2 mb-4 mb-lg-0 pb-2 pb-md-0 col-lg-3">
+                                    <div class="position-relative c-field">
+                                        <span class="icon icon-flight-takeoff font-20"></span>
+                                        <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input name="origen" maxlength="50" class="w-100 c-input pb-2 pl-4 origenes ui-autocomplete-input" id="ptags1" value="Bogota - Colombia (BOG)" type="text" autocomplete="off">
+                                        <input type="hidden" required="true" data-invalid="origen_flights_invalid" id="ant_ptags1" value="Bogota - Colombia (BOG)">
+                                        <input type="hidden" id="tipoorigen" value="nacional">
+                                        <label for="ptags1" class="placeholder">Origen</label>
+                                        <div id="origen_flights_invalid" class="invalid-feedback">
+                                            Por favor seleccione el origen!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="fDestination" class="col-12 col-lg-2-5 px-0 px-md-2 mb-4 mb-lg-0 pb-2 pb-md-0">
+                                    <div class="position-relative c-field">
+                                        <span class="icon icon-flight-land font-20"></span>
+                                        <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input name="destino" maxlength="50" class="origenes ui-autocomplete-input w-100 c-input pb-2 pl-4" id="ptags2" value="Cual es tu destino?" autocomplete="off" type="text">
+                                        <input type="hidden" id="ant_ptags2" required="true" data-invalid="destino_flights_invalid" value="">
+                                        <input type="hidden" id="tipodestino" value="">                                            <label for="ptags2" class="placeholder">Destino</label>
+                                        <div id="destino_flights_invalid" class="invalid-feedback text-left">
+                                            Por favor seleccione el destino!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="fGoing" class="col-6 col-lg-1-6 pl-0 pr-1 px-md-2 mb-4 mb-lg-0 pb-2 pb-md-0 c-going col-md-12 col-lg-2">
+                                    <div class="position-relative c-field">
+                                        <span class="icon icon-today font-20"></span>
+                                        <input type="text" placeholder=" " data-invalid="date_ida_flights_invalid" class="w-100 c-input pl-4" id="from_calendar" readonly="">
+                                        <input hidden="" type="text" data-invalid="date_ida_flights_invalid" required="true" name="from" id="from_calendar_value" readonly="">
+                                        <label for="from_calendar" class="placeholder">Ida</label>
+                                        <div id="date_ida_flights_invalid" class="invalid-feedback text-left">
+                                            Por favor seleccione la fecha de ida!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="fReturn" class="col-6 col-lg-1-6 pl-1 pr-0 px-md-2 mb-4 mb-lg-0 pb-2 pb-md-0 d-none">
+                                    <div class="position-relative c-field">
+                                        <span class="icon icon-event font-20"></span>
+                                        <input type="text" placeholder=" " data-invalid="date_regreso_flights_invalid" class="w-100 c-input pl-4" id="to_calendar" readonly="">
+                                        <input hidden="" type="text" data-invalid="date_regreso_flights_invalid" name="to" id="to_calendar_value" readonly="">
+                                        <label for="to_calendar" class="placeholder">Regreso</label>
+                                        <div id="date_regreso_flights_invalid" class="invalid-feedback text-left">
+                                            Por favor seleccione la fecha de regreso!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-2-5 px-0 px-md-2 mb-4 mb-lg-0 pb-2 pb-md-0">
+                                    <div class="position-relative">
+                                        <span class="icon icon-people font-20"></span>
+                                        <div id="idPassengers" class="position-relative c-field evtPassengers ">
+                                            <span class="icon icon-people font-20"></span>
+                                            <input id="inPassengers-flights" type="text" placeholder=" " data-invalid="passagers_child_age_flights_invalid" class="btnDropdown w-100 c-input pb-2 pl-4 flights-display" data-adult="1" data-minor="0" value="1 adultos" readonly="">
+                                            <input id="adult-flights" name="adultos" value="1" type="number" readonly="" hidden="">
+                                            <input id="minor-flights" name="ninos" value="0" type="number" readonly="" hidden="">
+                                            <label for="inPassengers-flights" class="placeholder placeholder-active">Pasajeros</label>
+                                            <div id="passagers_child_age_flights_invalid" class="invalid-feedback text-left">
+                                                Por favor seleccione la edad de los niños
+                                            </div>
+                                            <div id="cPassengers" class="c-passengers d-none p-3 p-md-2 p-lg-3 bg-white shadow evtDropdown">
+                                                <!-- start adults -->
+                                                <div class="row mb-3">
+                                                    <div class="col-7 col-md-5 col-lg-7">
+                                                        <span class="flights-adult-text">Adultos</span>
+                                                    </div>
+                                                    <div class="col-5 col-md-7 col-lg-5 c-icons pr-4">
+                                                        <div class="row flights">
+                                                            <div class="col-4 px-1 text-center btn-passengers -cp-pointer" data-target="flights" data-action="minus" data-type="adult">
+                                                                <span class="icon icon-remove -pe-none"></span>
+                                                            </div>
+                                                            <div class="col-4 px-1 text-center adult-value" data-target="flights" data-value="1" data-type="adult">
+                                                                <span>1</span>
+                                                            </div>
+                                                            <div class="col-4 px-1 text-center btn-passengers -cp-pointer" data-target="flights" data-action="plus" data-type="adult">
+                                                                <span class="icon icon-add -pe-none"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- start minors-->
+                                                <div class="row mb-3">
+                                                    <div class="col-7 col-md-5 col-lg-7">
+                                                        <span class="flights-minor-text">Niños</span>
+                                                    </div>
+                                                    <div class="col-5 col-md-7 col-lg-5 c-icons pr-4">
+                                                        <div class="row flights">
+                                                            <div class="col-4 px-1 text-center btn-passengers -cp-pointer" data-target="flights" data-action="minus" data-type="minor">
+                                                                <span class="icon icon-remove -pe-none"></span>
+                                                            </div>
+                                                            <div class="col-4 px-1 text-center minor-value" data-name="flightMinor" data-target="flights" data-value="0" data-type="minor">
+                                                                <span>0</span>
+                                                            </div>
+                                                            <div class="col-4 px-1 text-center btn-passengers -cp-pointer" data-target="flights" data-action="plus" data-type="minor">
+                                                                <span class="icon icon-add -pe-none"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- start minors age-->
+                                                <div class="row list-minor-flights">
+                                                    <div class="col-12 font-14 mb-2 label-minor-flights d-none">
+                                                        <span>¿Cuál es su edad?</span>
+                                                        <span>*</span>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn btn-primary btn-lg btn-block mt-3 close-dropdown-bookingbox -pe-auto">Listo</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-1 px-0 px-md-2 pr-lg-0 pl-lg-1 c-button">
+                                    <button class="btn btn-primary m-auto d-block py-3 py-md-2 w-100 btn-submit" type="button" data-action="form_flights">Buscar</button>
+                                    <button type="submit" hidden="true">submit</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            <!--cargando-->
+            <div class="loading-component" style="display: none;">
+                <div class="lds-dual-ring"></div>
+                <p class="text-uppercase font-16 f-p-semibold mt-3 mb-1 loading-text">Cargando...</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <table class="center" border="1" width="100%" bordercolor="#1212" cellpadding="0" cellspacing="0">
+        <tr >
+            <th>Fecha</th>
+            <th>Origen</th>
+            <th>Destino</th>
+            <th>Aerolinia</th>
+            <th>Duración</th>
+            <th>hora salida</th>
+            <th>hora llegada</th>
+    
+        </tr>
+        <tr>
+            <td>12/09/2022</td>
+            <td>Bogota</td>
+            <td>Bucaramanga</td>
+            <td>Avianca</td>
+            <td>40 min</td>
+            <td>1:45pm</td>
+            <td>2:25pm</td>      
+        </tr>
+        <tr>
+            <td>12/09/2022</td>
+            <td>Bogota</td>
+            <td>Leticia</td>
+            <td>Avianca</td>
+            <td>40 min</td>
+            <td>1:45pm</td>
+            <td>2:25pm</td>      
+        </tr>
+        <tr>
+            <td>12/09/2022</td>
+            <td>Bogota</td>
+            <td>San</td>
+            <td>Avianca</td>
+            <td>40 min</td>
+            <td>1:45pm</td>
+            <td>2:25pm</td>      
+        </tr>
+        <tr>
+            <td>12/09/2022</td>
+            <td>Bogota</td>
+            <td>Cali</td>
+            <td>Avianca</td>
+            <td>40 min</td>
+            <td>1:45pm</td>
+            <td>2:25pm</td>      
+        </tr>
+        <tr>
+            <td>12/09/2022</td>
+            <td>Bogota</td>
+            <td>Cali</td>
+            <td>Avianca</td>
+            <td>40 min</td>
+            <td>1:45pm</td>
+            <td>2:25pm</td>      
+        </tr>
+        <tr>
+            <td>12/09/2022</td>
+            <td>Bogota</td>
+            <td>Cali</td>
+            <td>Avianca</td>
+            <td>40 min</td>
+            <td>1:45pm</td>
+            <td>2:25pm</td>      
+        </tr>
+        <tr>
+            <td>12/09/2022</td>
+            <td>Bogota</td>
+            <td>Cali</td>
+            <td>Avianca</td>
+            <td>40 min</td>
+            <td>1:45pm</td>
+            <td>2:25pm</td>      
+        </tr>
+        <tr>
+            <td>12/09/2022</td>
+            <td>Bogota</td>
+            <td>Barranquilla</td>
+            <td>Latam</td>
+            <td>1:20 </td>
+            <td>12:00pm</td>
+            <td>1:20pm</td>  
+        
+        </tr>
+        <tr>
+            <td>12/09/2022</td>
+            <td>Bogota</td>
+            <td>Medellin</td>
+            <td>Viva</td>
+            <td>30 min</td>
+            <td>3:30pm</td>
+            <td>4:00pm</td>  
+        
+        </tr>
+    </table>
+  </section>
+
+  <footer class="footer">
+    <ul>
+      <li>Contacto</li>
+      <li>
+        <p>
+          2022 © EASYFLY S.A.Todos los derechos reservados.NIT. 900088915-7Av. Calle 26 # 103 – 08 Entrada 1 Hangar 27 | Bogotá, Colombia | Easyfly, hace fácil volar
+        </p>
+    </li>
+      <li>Telefono</li>
+    </ul>
+  </footer>
+
+</body>
+</html>

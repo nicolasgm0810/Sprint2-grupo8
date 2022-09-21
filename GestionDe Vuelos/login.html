@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <title>Gestion Vuelos</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logotipo">
+          <a href="/index.html">
+            <img src="./images/logo.png" alt="Logotipo">
+          </a>
+        </div>
+        <div class="headerRight">
+          <a href="./login.html">Login</a>
+          <a href="./registro.html">Registro</a>
+        </div>
+      </header>
+      <div class="divNav">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pasajero.html">Pasajero</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./corporativo.html">Corporativo</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Servicios
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="./vuelos.html">Vuelos</a></li>
+                    <li><a class="dropdown-item" href="#">Prepara tu vuelo</a></li>
+                    <li><a class="dropdown-item" href="#">Comentarios</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+  <section class="content">
+    <div class="login">
+      <img class="imagen" src="./images/logo.png" alt="">
+      <h1>Login Here</h1>
+      <form>
+         <!--username-->
+         <label for="username">username</label>
+         <input type="text" placeholder="Enter Username"><br>
+         <!--passwor-->
+         <label for="password">password</label>
+         <input type="password" placeholder="Enter Password">
+         <!--boton enviar-->
+         <input type="submit" value="log In"><br>
+         <!--bponr un enlace de olvidar contraseña-->
+         <a href="#">¿Has olvidado tu contraseña?</a><br>
+         <a href="#">¿Has olvidado tu correo electrónico?</a>
+         
+
+     
+
+
+      </form>
+
+ </div>
+  </section>
+
+  <footer class="footer">
+    <ul>
+      <li>Contacto</li>
+      <li>
+        <p>
+          2022 © EASYFLY S.A.Todos los derechos reservados.NIT. 900088915-7Av. Calle 26 # 103 – 08 Entrada 1 Hangar 27 | Bogotá, Colombia | Easyfly, hace fácil volar
+        </p>
+    </li>
+      <li>Telefono</li>
+    </ul>
+  </footer>
+
+</body>
+</html>
