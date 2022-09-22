@@ -526,4 +526,69 @@ body {
   align-content: center;
 }
 
-/* termina comentarios*/
+/* termina comentarios  aportes victor*/
+.btns{
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  top: 15%;
+  
+ 
+}
+
+.redondeado {
+  border-radius: 5px;
+  background-color: rgb(142, 181, 221);
+  font-family: inherit;
+  font-size: 100%; 
+  width: 50%;
+  height: 35px;
+  
+}
+
+.div2 {
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  position: relative; 
+  top: 17%;
+  
+}
+
+.form_info{
+  width: 70%;
+  position: relative;
+  top: 12%;
+}
+
+.titulo_info{
+  justify-content: start;
+  display: flex;
+  text-align: center;
+  position: relative;
+  top: 7%;
+}
+
+.titulo-info{
+  text-decoration-color: darkblue;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.content2 {
+  width: 100%;
+  height: 800px;
+  background-image: url("../images/4-diferencias-de-entre-el-Aeropuerto-de-Santa-Lucia-y-el-de-CDMX.jpg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.content3 {
+  width: 100%;
+  height: 800px;
+  background-image: url("../images/portada__MG_6647.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
