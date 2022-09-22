@@ -153,17 +153,17 @@
 }
 /*fabio crear cuenta*/
 .registro{
-  
   width:400px;
-  height: 620px;
+  height: 680px;
   background: #000;
   color: #fff;
-  top: 90%;/*centrar*/
+  top: 97%;/*centrar*/
   left: 50%;
   position: absolute;
   transform:translate(-50%,-50%);/*centrar*/
   box-sizing: border-box;
-  padding: 100px 30px;/*espaciado interno*/
+  border-radius: 7px;
+  padding: 100px 30px 20px 30px;/*espaciado interno*/
 }
 .imagenreg{
   width: 100px;
@@ -189,7 +189,7 @@
 }
 .registro input{
   width: 100%;
-   margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .registro input[type="text"],
 .registro input[type="password"]{
@@ -211,15 +211,15 @@
   font-size: 18px;
   border-radius: 20px;
 }
-.checkbox {
-  
-  display: flex;
-  align-items: center;
-  
-  
+.registro .check{
+  width: 30px;
+  margin: 0 20px;
 }
 
-
+.checkbox {
+  display: flex;
+  justify-content: start;
+}
 
 .registro a{
   text-decoration: none;
@@ -272,49 +272,49 @@ a {
 }
 
 ul {
- list-style-type: none;
+  list-style-type: none;
 }
 
 body {
- font-family: 'Roboto', Arial, Helvetica, Sans-serif, Verdana;
- background: #dee1e3;
+  font-family: 'Roboto', Arial, Helvetica, Sans-serif, Verdana;
+  background: #dee1e3;
 }
 
 /** ====================
 * Lista de Comentarios
 =======================*/
 .comments-container {
- margin: 60px auto 15px;
- width: 768px;
+  margin: 60px auto 15px;
+  width: 768px;
 }
 
 .comments-container h1 {
- font-size: 36px;
- color: #283035;
- font-weight: 400;
+  font-size: 36px;
+  color: #283035;
+  font-weight: 400;
 }
 
 .comments-container h1 a {
- font-size: 18px;
- font-weight: 700;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .comments-list {
- margin-top: 30px;
- position: relative;
+  margin-top: 30px;
+  position: relative;
 }
 
 /**
 * Lineas / Detalles
 -----------------------*/
 .comments-list:before {
- content: '';
- width: 2px;
- height: 100%;
- background: #c7cacb;
- position: absolute;
- left: 32px;
- top: 0;
+  content: '';
+  width: 2px;
+  height: 100%;
+  background: #c7cacb;
+  position: absolute;
+  left: 32px;
+  top: 0;
 }
 
 .comments-list:after {
