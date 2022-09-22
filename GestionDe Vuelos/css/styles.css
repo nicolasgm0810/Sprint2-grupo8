@@ -81,13 +81,13 @@
   margin: 20px;
   list-style: none;
 }
-/*fabio registro*/
+/*fabio login*/
 .login{
-  width: 320px;
+  width: 400px;
   height: 420px;
   background: #000;
   color: #fff;
-  top: 80%;/*centrar*/
+  top: 73%;/*centrar*/
   left: 50%;
   position: absolute;
   transform:translate(-50%,-50%);/*centrar*/
@@ -153,17 +153,17 @@
 }
 /*fabio crear cuenta*/
 .registro{
-  margin-top: 10%;
-  width:530px;
-  height: 820px;
+  
+  width:400px;
+  height: 620px;
   background: #000;
   color: #fff;
-  top: 80%;/*centrar*/
+  top: 90%;/*centrar*/
   left: 50%;
   position: absolute;
   transform:translate(-50%,-50%);/*centrar*/
   box-sizing: border-box;
-  padding: 100px 60px;/*espaciado interno*/
+  padding: 100px 30px;/*espaciado interno*/
 }
 .imagenreg{
   width: 100px;
@@ -176,21 +176,20 @@
 }
 .registro h1{
   margin: 0;
-  padding: 0 0 10px;
+  padding: 0 0 20px;
   text-align: center;
   font-size: 22px;
 }
 .registro label{
-  margin: 0px;
-  padding: 0 0 10px;
+  margin: 0;
+  padding:0;
   font-weight: bold;
   display: block;
   
 }
 .registro input{
   width: 100%;
-  
-  margin-bottom: 10px;
+   margin-bottom: 20px;
 }
 .registro input[type="text"],
 .registro input[type="password"]{
@@ -203,6 +202,25 @@
   font-size: 16px;
   
 }
+.registro input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 40px;
+  background: rgb(58, 152, 240) ;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+}
+.checkbox {
+  
+  display: flex;
+  align-items: center;
+  
+  
+}
+
+
+
 .registro a{
   text-decoration: none;
   font-size: 12px;
